@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      pull: true
+    pull_policy: build
+    init: true
+    privileged: true
+
+    volumes:
+      - ../../:/workspace
+      - /dev/bus/usb/:/dev/bus/usb
+    user: vscode
+    command: sleep infinity

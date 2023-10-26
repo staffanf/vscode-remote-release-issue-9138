@@ -1,0 +1,17 @@
+{
+	"name": "testcontainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+	"postAttachCommand": "echo test",
+	"customizations": {
+		"vscode": {
+			"extensions": [],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+			}
+		}
+	},
+	"remoteUser": "vscode"
+}
