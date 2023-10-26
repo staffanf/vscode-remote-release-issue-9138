@@ -1,3 +1,11 @@
 # vscode-remote-release-issue-9138
 
 This repo reproduces issue: https://github.com/microsoft/vscode-remote-release/issues/9138
+
+# Repro steps: 
+
+1. Open devcontainer in VSCode (current 1.83.1, devcontainers v0.318.0)
+2. Close VSCode
+3. `rm -rf /tmp/devcontainercli-$USER` or reboot machine
+4. Open VSCode, get ERROR about missing file in `/tmp/devcontainercli-$USER`
+5. `> Dev Containers: Rebuild and Reopen in Container`
